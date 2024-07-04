@@ -5,3 +5,5 @@
 ```python 
 python manage.py runserver
 ```
+
+watch video here https://streamable.com/nbyxw1
