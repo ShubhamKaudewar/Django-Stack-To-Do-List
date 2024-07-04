@@ -1,9 +1,17 @@
-from django.contrib import admin
+from django.contrib.admin import site, ModelAdmin
+from todoList.models import noteModel # Register your models here.
 
-# Register your models here.
-from todoList.models import noteModel
 
-class noteModelList(admin.ModelAdmin):
-    list_display = ('noteStar','noteStyle','noteBold','noteItalic','noteUnderline','noteTextColor','noteBackgroundColor')
+class noteModelList(ModelAdmin):
+    list_display = (
+        'noteStar',
+        'noteStyle',
+        'noteBold',
+        'noteItalic',
+        'noteUnderline',
+        'noteTextColor',
+        'noteBackgroundColor'
+    )
 
-admin.site.register(noteModel,noteModelList)
+
+site.register(noteModel, noteModelList)

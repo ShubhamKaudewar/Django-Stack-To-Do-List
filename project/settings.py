@@ -82,5 +82,7 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/')
 LOGIN_REDIRECT_URL = '/'
-import django_heroku
-django_heroku.settings(locals())
+
+# Heroku no longer provider free tier service for hosting
+# import django_heroku
+# django_heroku.settings(locals())
